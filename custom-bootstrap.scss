@@ -1,0 +1,67 @@
+@import "./scss/functions";
+@import "./scss/variables";
+
+// per ridimensionare immagini
+$img-sizes: (
+  "sm": 30px,
+  "md": 60px,
+  "lg": 100px,
+  "xl": 150px,
+  "fluid": 100%,
+);
+
+// creo classi  nuove size e altre regole
+
+@each $key, $value in $img-sizes {
+  .img-w-#{$key} {
+    width: $value;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+//nuove variabili colore
+
+$netflix-black: #141414;
+$netflix-red: #e50914;
+$netflix-dark-grey: #222222;
+$netflix-light-grey: #808080;
+
+// creo mappa
+$netflix-colors: (
+  "netflix-black": $netflix-black,
+  "netflix-red": $netflix-red,
+  "netflix-dark": $netflix-dark-grey,
+  "netflix-grey": $netflix-light-grey,
+);
+
+// unisco a mappa bootstrap
+$theme-colors: map-merge($theme-colors, $netflix-colors);
+
+// per sovrascrivere direttamente i colori default di base
+
+$body-bg: $netflix-black;
+$body-color: $white;
+
+//manina
+.cursor-pointer {
+  cursor: pointer;
+}
+@import "./scss/maps";
+@import "./scss/mixins";
+@import "./scss/utilities";
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "font-size":
+//       map-merge(
+//         map-get($utilities, "font-size"),
+//         (
+//           responsive: true,
+//         )
+//       ),
+//   )
+// );
+
+@import "./scss/bootstrap.scss";

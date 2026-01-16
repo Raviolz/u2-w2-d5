@@ -17,12 +17,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./custom-bootstrap.css" />
   </head>
   <body>
     <!-- INIZIO NAV -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-3 px-lg-5">
+        <a class="navbar-brand" href="#">
+          <img src="./Netflix-assets/assets/netflix_logo.png" alt="Logo" class="img-w-lg" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,43 +38,38 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link text-white fw-bold" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">TV Shows</a>
+              <a class="nav-link text-netflix-grey" href="#">TV Shows</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Movies</a>
+              <a class="nav-link text-netflix-grey" href="#">Movies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recently Added</a>
+              <a class="nav-link text-netflix-grey" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My List</a>
+              <a class="nav-link text-netflix-grey" href="#">My List</a>
             </li>
           </ul>
-          <div class="d-flex align-items-center">
-            <form class="d-flex" role="search">
-              <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-            <span>KIDS</span>
 
-            <a href="#">
-              <i class="fas fa-bell"></i>
-            </a>
+          <div class="d-flex align-items-center gap-3">
+            <i class="fas fa-search text-white cursor-pointer"></i>
+            <span class="text-white fw-bold small">KIDS</span>
+            <i class="fas fa-bell text-white cursor-pointer"></i>
 
             <div class="dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="tuo-avatar.png" alt="Profilo" style="height: 30px" />
+              <a class="dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./Netflix-assets/assets/avatar.png" alt="AVATAR" class="img-w-sm" />
               </a>
-
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              <ul class="dropdown-menu dropdown-menu-end bg-dark border-secondary">
+                <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider border-secondary" /></li>
+                <li><a class="dropdown-item text-white" href="#">Sign out</a></li>
               </ul>
             </div>
           </div>
@@ -82,26 +80,38 @@
     <!--FINE NAV -->
     <!-- INIZIO MAIN -->
     <!-- INIZIO SELEZIONE -->
-    <main class="container-fluid">
-      <div class="row align-items-center">
+    <main class="container-fluid px-3 px-lg-5 mt-3">
+      <div class="row align-items-center mb-4">
         <div class="col d-flex align-items-center">
-          <h2 class="me-4">TV Shows</h2>
+          <h2 class="me-4 mb-0 fw-bold text-white">TV Shows</h2>
 
-          <div class="btn-group">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
-              <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <div class="dropdown">
+            <button
+              class="btn btn-black border-white text-white dropdown-toggle btn-sm rounded-0 px-3"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Genres
+            </button>
+            <ul class="dropdown-menu bg-dark border-secondary">
+              <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
+              <li><a class="dropdown-item text-white" href="#">Drama</a></li>
+              <li><a class="dropdown-item text-white" href="#">Thriller</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="col-auto d-flex align-items-center">
-          <i class="fas fa-align-left"></i>
-          <i class="fas fa-th-large"></i>
+        <div class="col-auto d-none d-md-flex align-items-center gap-0">
+          <button class="btn btn-black border-secondary text-white rounded-0 px-3 py-1">
+            <i class="fas fa-align-left small"></i>
+          </button>
+          <button class="btn btn-black border-secondary text-white rounded-0 px-3 py-1">
+            <i class="fas fa-th-large small"></i>
+          </button>
         </div>
       </div>
+      ```
 
       <!-- FINE SELEZIONE -->
       <!-- INIZIO SLIDERS -->
@@ -148,61 +158,60 @@
     <!-- FINE MAIN -->
     <!-- INIZIO FOOTER -->
     <!-- INIZIO RIGA SOCIAL -->
-
-    <footer class="container">
-      <div class="row">
-        <div class="col">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-youtube"></i>
+    <footer class="container-fluid px-3 px-lg-5 mt-5 pb-5 text-netflix-grey">
+      <div class="row mb-3">
+        <div class="col d-flex gap-4 fs-4">
+          <i class="fab fa-facebook-f cursor-pointer"></i>
+          <i class="fab fa-instagram cursor-pointer"></i>
+          <i class="fab fa-twitter cursor-pointer"></i>
+          <i class="fab fa-youtube cursor-pointer"></i>
         </div>
       </div>
       <!-- FINE RIGA SOCIAL -->
       <!-- INIZIO COLONNE LINKs FINALI -->
-      <div class="row">
+      <div class="row row-cols-2 row-cols-md-4 g-3 mb-4">
         <!-- INIZIO PRIMA COLONNA -->
         <div class="col">
-          <ul>
-            <li><a href="#">Audio and Subtitles</a></li>
-            <li><a href="#">Media Center</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Contact Us</a></li>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Audio and Subtitles</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Media Center</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Privacy</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Contact Us</a></li>
           </ul>
         </div>
-
         <!-- INIZIO SECONDA COLONNA -->
         <div class="col">
-          <ul>
-            <li><a href="#">Audio Description</a></li>
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Legal Notices</a></li>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Audio Description</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Investor Relations</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Legal Notices</a></li>
           </ul>
         </div>
 
         <!-- FINE SECONDA COLONNA -->
         <!-- INZIO TERZA COLONNA -->
         <div class="col">
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Job</a></li>
-            <li><a href="#">Cookie Preferences</a></li>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Help Center</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Jobs</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Cookie Preferences</a></li>
           </ul>
         </div>
 
         <!-- FINE TERZA COLONNA -->
         <!-- INZIO QUARTA COLONNA -->
         <div class="col">
-          <ul>
-            <li><a href="#">Gift Cards</a></li>
-            <li><a href="#">Terms Of Use</a></li>
-            <li><a href="#">Corporate Information</a></li>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Gift Cards</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Terms Of Use</a></li>
+            <li><a href="#" class="text-netflix-grey text-decoration-none">Corporate Information</a></li>
           </ul>
         </div>
       </div>
       <!-- FINE QUARTA COLONNA -->
-      <button>Service Code</button>
-      <h6>&copy 1997-2019 Netflix, Inc.</h6>
+      <button class="btn btn-outline-secondary btn-sm rounded-0 mb-3 px-2 py-1" style="font-size: 0.7rem">Service Code</button>
+
+      <p class="mb-0" style="font-size: 0.7rem">&copy; 1997-2026 Netflix, Inc.</p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
