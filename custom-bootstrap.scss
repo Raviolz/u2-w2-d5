@@ -47,6 +47,19 @@ $body-color: $white;
 .cursor-pointer {
   cursor: pointer;
 }
+
+.overflow-auto::-webkit-scrollbar {
+  display: none; /*Trovato modo per togliere la scroll bar */
+}
+
+.navbar-brand img {
+  margin-left: -12px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
 @import "./scss/maps";
 @import "./scss/mixins";
 @import "./scss/utilities";

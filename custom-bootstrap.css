@@ -38,6 +38,18 @@
   cursor: pointer;
 }
 
+.overflow-auto::-webkit-scrollbar {
+  display: none; /*Trovato modo per togliere la scroll bar */
+}
+
+.navbar-brand img {
+  margin-left: -12px;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
