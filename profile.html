@@ -11,8 +11,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./custom-bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   </head>
-  <body>
+  <body class="profile-page">
     <!-- INIZIO NAV -->
     <nav class="navbar navbar-dark">
       <div class="container-fluid px-3 px-lg-5">
@@ -27,21 +28,27 @@
       <div class="row justify-content-center mt-5">
         <!-- INIZIO TUTTA LA COLONNA -->
         <div class="col-12 col-md-8 col-lg-6">
-          <h1 class="display-4 fw-bold border-bottom border-secondary pb-3 mb-4">Edit Profile</h1>
+          <h1 class="display-4 border-bottom border-secondary pb-3 mb-4">Edit Profile</h1>
           <!-- INIZIO COLONNA SX -->
           <div class="row">
-            <div class="col-12 col-sm-4 mb-3">
+            <div class="col-12 col-sm-3 mb-3">
               <div class="position-relative">
                 <img src="./Netflix-assets/assets/avatar.png" alt="Profilo" class="img-fluid rounded-0" />
+                <span
+                  class="position-absolute bottom-0 start-0 mb-2 ms-2 bg-dark border border-secondary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 30px; height: 30px; cursor: pointer"
+                >
+                  <i class="fa-solid fa-pencil text-white" style="font-size: 12px"></i>
+                </span>
               </div>
             </div>
             <!-- FINE COLONNA SX -->
             <!-- INIZIO COLONNA DX -->
-            <div class="col-12 col-sm-8">
-              <input type="text" class="form-control bg-secondary text-white border-0 rounded-0 mb-4" value="Strive Student" />
+            <div class="col-12 col-sm-9">
+              <input type="text" class="form-control bg-netflix-grey text-white border-0 rounded-0 mb-4 w-75 mt-0 py-2" value="Strive Student" />
 
               <div class="mb-4">
-                <p class="text-secondary mb-1">Language:</p>
+                <p class="text-secondary mb-1 fs-5 text-netflix-white">Language:</p>
                 <select class="form-select bg-dark text-white border-secondary rounded-0 w-auto shadow-none">
                   <option selected>English</option>
                   <option>Italiano</option>
@@ -51,19 +58,23 @@
               <hr class="border-secondary" />
 
               <div class="mb-4">
-                <p class="text-secondary">Maturity Settings:</p>
-                <span class="bg-secondary text-white px-2 py-1 fw-bold">ALL MATURITY RATINGS</span>
+                <p class="text-secondary fs-5 text-netflix-white">Maturity Settings:</p>
+                <span class="bg-netflix-dark-grey text-white px-2 py-1 fw-bold">ALL MATURITY RATINGS</span>
                 <p class="small mt-2">Show titles of all maturity ratings for this profile.</p>
-                <button class="btn btn-outline-secondary rounded-0 btn-sm text-white px-4">EDIT</button>
+                <button class="btn btn-outline-secondary rounded-0 btn-sm text-white px-4 text-netflix-white">EDIT</button>
               </div>
 
               <hr class="border-secondary" />
 
               <div class="mb-4">
-                <p class="text-secondary">Autoplay controls:</p>
+                <p class="text-secondary fs-5 text-netflix-white">Autoplay controls:</p>
                 <div class="form-check mb-2">
                   <input class="form-check-input bg-dark border-secondary shadow-none" type="checkbox" checked id="check1" />
                   <label class="form-check-label small" for="check1">Autoplay next episode in a series on all devices.</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input bg-dark border-secondary shadow-none" type="checkbox" checked id="check1" />
+                  <label class="form-check-label small" for="check1">Autoplay previewswhile browsing on all devices.</label>
                 </div>
               </div>
             </div>
@@ -71,9 +82,9 @@
           </div>
           <!-- INTERNO TUTTA COLONNA MA FINE -->
           <div class="border-top border-secondary pt-4 mt-4 d-flex flex-wrap gap-3">
-            <button class="btn btn-white text-black fw-bold rounded-0 px-4">SAVE</button>
-            <button class="btn btn-outline-secondary rounded-0 px-4">CANCEL</button>
-            <button class="btn btn-outline-secondary rounded-0 px-4">DELETE PROFILE</button>
+            <button class="btn btn-light text-black fw-bold rounded-0 px-4 flex-fill py-2">SAVE</button>
+            <button class="btn btn-outline-secondary rounded-0 px-4 flex-fill py-2">CANCEL</button>
+            <button class="btn btn-outline-secondary rounded-0 px-4 flex-fill py-2">DELETE PROFILE</button>
           </div>
         </div>
       </div>

@@ -24,15 +24,19 @@ $img-sizes: (
 
 $netflix-black: #141414;
 $netflix-red: #e50914;
-$netflix-dark-grey: #222222;
+$netflix-dark: #222222;
 $netflix-light-grey: #808080;
+$netflix-dark-grey: #333333;
+$netflix-white: #e5e5e5;
 
 // creo mappa
 $netflix-colors: (
   "netflix-black": $netflix-black,
   "netflix-red": $netflix-red,
-  "netflix-dark": $netflix-dark-grey,
+  "netflix-dark": $netflix-dark,
   "netflix-grey": $netflix-light-grey,
+  "netflix-dark-grey": $netflix-dark-grey,
+  "netflix-white": $netflix-white,
 );
 
 // unisco a mappa bootstrap
@@ -41,7 +45,7 @@ $theme-colors: map-merge($theme-colors, $netflix-colors);
 // per sovrascrivere direttamente i colori default di base
 
 $body-bg: $netflix-black;
-$body-color: $white;
+$body-color: $netflix-white;
 
 //manina
 .cursor-pointer {
@@ -49,32 +53,30 @@ $body-color: $white;
 }
 
 .overflow-auto::-webkit-scrollbar {
-  display: none; /*Trovato modo per togliere la scroll bar */
+  display: none; /*Trovato modo per togliere la scroll bar forse.. questo mi ha dato non pochi problemi*/
 }
 
 .navbar-brand img {
   margin-left: -12px;
 }
 
+//profile
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+//profile css
+.profile-page .navbar-brand img {
+  width: 150px !important;
+}
+
+.profile-page h1 {
+  border-bottom: 1px solid #333 !important;
+  letter-spacing: 1px;
 }
 
 @import "./scss/maps";
 @import "./scss/mixins";
 @import "./scss/utilities";
-
-// $utilities: map-merge(
-//   $utilities,
-//   (
-//     "font-size":
-//       map-merge(
-//         map-get($utilities, "font-size"),
-//         (
-//           responsive: true,
-//         )
-//       ),
-//   )
-// );
 
 @import "./scss/bootstrap.scss";
